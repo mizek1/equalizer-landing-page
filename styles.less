@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
+
+@primary: #66e2dc;
+@secondary: #fa7453;
+@tertiary: #ffb964;
+@white: #fcfaf9;
+@black: #191826;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  font-size: 16px;
+}
+
+.equalizer {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 0;
+  background: url(./assets/bg-main-mobile.png) no-repeat left 0px top -250px;
+
+  &__header {
+    padding: 0 1.5rem;
+  }
+
+  &__title {
+    padding: 0 1.5rem;
+    margin: 4rem 0;
+    color: @black;
+
+    h1 {
+      font-size: 2.5rem;
+      line-height: 3rem;
+      font-weight: bold;
+      letter-spacing: -0.454545px;
+      margin-bottom: 1.25rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.625rem;
+    }
+  }
+
+  &__description {
+    background: @black url(./assets/bg-pattern-2.svg) no-repeat center top;
+    background-size: 280px 420px;
+    border-radius: 0.75rem;
+    margin: 6.125rem 0 0 0;
+
+    aside {
+      height: calc(430px - 6.125rem);
+      margin-bottom: 2.5rem;
+
+      img {
+        width: 13rem;
+        transform: translateX(5rem) translateY(-6.125rem);
+      }
+    }
+
+    section {
+      background: @secondary;
+      color: @white;
+      padding: 3rem 2.25rem;
+      border-radius: 0.75rem;
+
+      h2 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 0.75rem;
+      }
+
+      p {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        font-weight: normal;
+        margin-bottom: 2.25rem;
+      }
+
+      h3 {
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 4.0625rem;
+        line-height: 3.25rem;
+        margin-bottom: 2rem;
+
+        span {
+          font-weight: normal;
+          font-size: 1.25rem;
+          line-height: 2rem;
+          letter-spacing: -0.2px;
+        }
+      }
+    }
+  }
+
+  &__button--ios {
+    .button();
+    background: @black;
+    color: @white;
+    margin-bottom: 1rem;
+  }
+
+  &__button--android {
+    .button();
+    background: @white;
+    color: @black;
+  }
+
+  &__footer {
+    padding: 4rem 1.5rem 3rem 1.5rem;
+    color: @black;
+
+    & > img {
+      margin-bottom: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.625rem;
+    }
+
+    p + p {
+      margin-bottom: 4rem;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+  }
+}
+
+.button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  outline: none;
+  padding: 1rem 0;
+  border-radius: 0.75rem;
+
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 2rem;
+  text-align: center;
+  letter-spacing: -0.18px;
+}
